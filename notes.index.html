@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes Management</title>
+    <link rel="stylesheet" href="notes.css">
+</head>
+<body>
+
+<h1>🎀 Daily Notes Manager 🎀</h1>
+
+<form action="/addNote" method="POST">
+
+    <label>Date</label>
+    <input type="date" name="date" required>
+
+    <label>Note</label>
+    <textarea name="note" rows="4" required></textarea>
+
+    <button type="submit"> 💖Save Note</button></form>
+
+    <h3>Filter Notes By Date</h3>
+
+<form action="/filter" method="POST">
+    <input type="date" name="filterDate" required>
+    <button type="submit">Search Notes</button>
+
+
+</form>
+
+<br>
+
+<a href="/notes" class="view-btn">📖 View Notes</a>
+<!--delete note form-->
+<form action="/delete" method="POST">
+
+    <label>Delete Note By Date</label>
+
+    <input type="date" name="date" required>
+
+    <button type="submit">
+       🗑 Delete Note
+    </button>
+
+</form>
+
+</body>
+</html>
